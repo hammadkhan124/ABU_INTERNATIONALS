@@ -40,16 +40,16 @@ app.post("/", function (req, res) {
       port: 465,
       secure: true,
       auth: {
-        user: "gatewayacademy456@gmail.com", // this should be YOUR GMAIL account
-        pass: "jfkzuuhuwzelvsfz", // this should be your password
+        user: "abupartners@gmail.com", // this should be YOUR GMAIL account
+        pass: "asemfavjxefdxvop", // this should be your password
       },
     });
-    var textBody = `FROM: ${req.body.name} EMAIL: ${req.body.email} Message: ${req.body.message} `;
-    var htmlBody = `<h2> Mail From  Campsite </h2><p>from:<a href="mailto:${req.body.email}">${req.body.email}</a></p><h3>NAME:</h3><p>${req.body.name}</p><h3>Message:</h3><p>${req.body.message}</p>`;
+    var textBody = `FROM: ${req.body.name} EMAIL: ${req.body.email} PHONENO:${req.body.phone} Message: ${req.body.message} `;
+    var htmlBody = `<h2> Mail From  Customer </h2><p>from:<a href="mailto:${req.body.email}">${req.body.email}</a></p><h3>NAME:</h3><p>${req.body.name}</p><h3>PURPOSE:</h3><p>${req.body.phone}</p><h3>Message:</h3><p>${req.body.message}</p>`;
     var mail = {
-      from: "gatewayacademy456@gmail.com", // sender address
-      to: "gatewayacademy456@gmail.com", // list of receivers (THIS COULD BE A DIFFERENT ADDRESS or ADDRESSES SEPARATED BY COMMAS)
-      subject: "Mail From Visitor ", // Subject line
+      from: "abupartners@gmail.com", // sender address
+      to: "abupartners@gmail.com", // list of receivers (THIS COULD BE A DIFFERENT ADDRESS or ADDRESSES SEPARATED BY COMMAS)
+      subject: "Mail From Customer ", // Subject line
       text: textBody,
       html: htmlBody,
     };
